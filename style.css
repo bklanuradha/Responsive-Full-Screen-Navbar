@@ -30,3 +30,62 @@ html{
     flex-flow: column;
     padding: 0 10%;
 }
+
+.navbar a{
+    font-size: 4em;
+    color: transparent;
+    -webkit-text-stroke: .5px rgba(255,255,255,.5);
+    font-weight: bolder;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.navbar a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255,255,255,.9);
+    transition: .3s linear;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.navbar a:hover::before{
+    clip-path: polygon(0 0, 100% 0, 99% 100%, 0 100%);
+}
+
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/nav-img-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.navbar a:hover:nth-child(2) ~ .background-image{
+    background: url(../images/nav-img-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar a:hover:nth-child(3) ~ .background-image{
+    background: url(../images/nav-img-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar a:hover:nth-child(4) ~ .background-image{
+    background: url(../images/nav-img-4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar a:hover:nth-child(5) ~ .background-image{
+    background: url(../images/nav-img-5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
