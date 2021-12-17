@@ -20,7 +20,7 @@ html{
 .navbar{
     position: fixed;
     top: 0;
-    left: 0;
+    left: -110;
     height: 100%;
     width: 100%;
     z-index: 1000;
@@ -88,4 +88,18 @@ html{
     background: url(../images/nav-img-5.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media(max-width:768px){
+    .navbar a{
+        font-size: 3em;
+
+    }
+}
+
+@media(max-width:450px){
+    .navbar a{
+        font-size: 2em;
+        
+    }
 }
